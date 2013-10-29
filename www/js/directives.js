@@ -8,4 +8,13 @@ angular.module('myApp.directives', []).
     return function(scope, elm, attrs) {
       elm.text(version);
     };
-  }]);
+  }]).
+  directive('jqueryMobileTpl', function() {
+  	return {
+    	link: function(scope, elm, attr) {
+      		elm.trigger('create');
+    	}
+  	};
+  }); 
+
+
